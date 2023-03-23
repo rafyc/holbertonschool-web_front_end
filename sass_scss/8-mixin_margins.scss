@@ -1,0 +1,17 @@
+/* Assigns margin using mixin */
+@mixin ml15 {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+@mixin ml10 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+body {
+	@include ml15;
+}
+
+div {
+	@include ml10;
+}
