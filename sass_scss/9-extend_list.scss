@@ -4,10 +4,10 @@
 }
 .succes {
 	@extend .info;
-	color: #00FF00;
+	color: #00ff00;
 }
 
-.error {
+.warning {
 	@extend .info;
-	color: #FF0000;
+	color: #ff0000;
 }
