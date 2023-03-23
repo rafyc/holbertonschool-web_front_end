@@ -1,8 +1,7 @@
-/* Assigns declarations using nested hover */
-
+/* Using nested hover */
 button {
-  color: #ff0000;
-  &:hover {
-    color: #00ff00;
-  }
+	color: #ff0000;
+	&:hover {
+		color: #00ff00;
+	}
 }
