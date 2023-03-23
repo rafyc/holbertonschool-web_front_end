@@ -1,0 +1,8 @@
+/* Assigns declaration using nested child */
+
+body {
+  color: #3d3d3d;
+  body > .red {
+    color: #ff0000;
+  }
+}
