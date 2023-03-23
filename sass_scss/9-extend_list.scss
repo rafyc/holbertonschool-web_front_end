@@ -1,0 +1,13 @@
+/* Assigns declaration using @extend */
+.info {
+	font-size: 12px;
+}
+.succes {
+	@extend .info;
+	color: #00ff00;
+}
+
+.error {
+	@extend .info;
+	color: #ff0000;
+}
