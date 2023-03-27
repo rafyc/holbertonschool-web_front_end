@@ -354,7 +354,7 @@
     padding: 10rem 4rem;
   }
 
-  .section-category .section-hero {
+ .section-hero .section-category{
     color: --color-white;
     text-transform: uppercase;
   }
