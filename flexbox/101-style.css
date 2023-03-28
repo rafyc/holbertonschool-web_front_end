@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    display: flex;
+    color: white;
+    width: 100px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.box1 {
+    background-color: green;
+}
+.box2 {
+    background-color: blue;
+    margin: 50px;
+}
+.box3 {
+    background-color: midnightblue;
+    position: fixed;
+    margin: 30px;
+}
+.box4 {
+    background-color: blueviolet;
+}
+.box5 {
+    background-color: orangered;
+}
