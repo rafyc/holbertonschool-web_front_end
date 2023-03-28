@@ -678,7 +678,15 @@ fieldset {
     border: 0;
     padding: 0 0 2rem;
 }
+label {
+    cursor: pointer;
+    display:block;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    padding: 0 0 .5rem;
+}
 
+/*
 input {
     position: relative;
     width: 100%;
@@ -688,4 +696,4 @@ input {
     background-color: var(--color-white);
     box-shadow: none;
     outline: 0;
-}
+} */
