@@ -685,15 +685,3 @@ label {
     font-size: 1.4rem;
     padding: 0 0 .5rem;
 }
-
-/*
-input {
-    position: relative;
-    width: 100%;
-    padding: 1.2rem;
-    line-height: 1;
-    border: solid .1rem var(var(--color-black));
-    background-color: var(--color-white);
-    box-shadow: none;
-    outline: 0;
-} */
