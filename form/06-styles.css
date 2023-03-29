@@ -155,7 +155,7 @@ a:active {
     transition-property: color, background-color;
 }
 .button-primary {
-    color: var(--color-primary);
+    background: var(--color-primary);
 }
 
 .button-primary:hover {
