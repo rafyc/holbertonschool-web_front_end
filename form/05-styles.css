@@ -729,8 +729,8 @@ background-color: var(--color-white);
 }
 
 .form-group:focus-within {
-    background-color: red;
-    transition: .3 ;
+    background-color: var(--color-light-grey);
+    transition: .3s;
 }
 
 /* Form field
@@ -752,7 +752,7 @@ font-style: normal;
     color: var(--color-dark-grey);
     font-size: var(--font-size-small);
     max-height: 0;
-    transition: .3;
+    transition: .3s;
     overflow: hidden;
 }
 
