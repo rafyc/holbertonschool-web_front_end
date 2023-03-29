@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="01-styles.css">
+    <link rel="stylesheet" href="06-styles.css">
 </head>
 
 <body>
@@ -86,7 +86,7 @@
                                         faucibus, eget convallis nisi finibus. Interdum et malesuada fames ac ante ipsum
                                         primis in faucibus. Vestibulum accumsan euismod nunc quis viverra.</p>
                                     <figure>
-                                        <img src="images/the-honest-company-j69c0Q650Hw-unsplash.jpg"
+                                        <img src="images/pic-article-01.jpg"
                                             alt="Glasses, baby converse shoes, black bag, wipper on a dresser with a open drawer"
                                             width="620" height="350">
                                         <figcaption class="img-caption">Pugnant Stoici cum Peripateticis. Prioris
@@ -177,7 +177,84 @@
                                     <h2 class="section-title">Leave a comment</h2>
                                     <p>All fields are required.</p>
                                 </header>
-                                <form action="#" method="post"></form>
+                                <form action="#" method="post">
+                                    <fieldset>
+                                        <legend class="visually-hidden">Your personal information</legend>
+                                        <div class="form-group col-1-2">
+                                            <label for="your-first-name">First Name</label>
+                                            <div class="form-field">
+                                                <span class="form-field-container">
+                                                    <input type="text" name="your-first-name" id="your-first-name"
+                                                        placeholder="e.g. Mike" pattern="[A-Za-zÀ-ž\s]{3,}"
+                                                        maxlength="35" autocomplete="on" accesskey="f"
+                                                        required="required">
+                                                    <i class="form-field-icon"></i>
+                                                </span>
+                                                <p class="form-help">First name should be at least 3 characters and only
+                                                    contains letters</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-1-2">
+                                            <label for="your-last-name">Last Name</label>
+                                            <div class="form-field">
+                                                <span class="form-field-container">
+                                                    <input type="text" name="your-last-name" id="your-last-name"
+                                                        placeholder="e.g. Smith" pattern="[A-Za-zÀ-ž\s]{3,}"
+                                                        maxlength="40" autocomplete="on" accesskey="l"
+                                                        required="required">
+                                                    <i class="form-field-icon"></i>
+                                                </span>
+                                                <p class="form-help">Last name should be at least 3 characters and only
+                                                    contains letters</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-2-3">
+                                            <label for="your-email">Email</label>
+                                            <div class="form-field">
+                                                <span class="form-field-container">
+                                                    <input type="email" name="your-email" id="your-email"
+                                                        placeholder="e.g. youremail@gmail.com"
+                                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="55"
+                                                        autocomplete="on" accesskey="e" required="required">
+                                                    <i class="form-field-icon"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="visually-hidden">Your comment</legend>
+                                        <div class="form-group col-2-3">
+                                            <label for="your-title">Title</label>
+                                            <div class="form-field">
+                                                <span class="form-field-container">
+                                                    <input type="text" name="your-title" id="your-title"
+                                                        placeholder="e.g. I loved that article"
+                                                        pattern="[A-Za-zÀ-ž\s]{4,}" maxlength="75" autocomplete="on"
+                                                        accesskey="t" required="required">
+                                                    <i class="form-field-icon"></i>
+                                                </span>
+                                                <p class="form-help">Title should be at least 4 characters and only
+                                                    contains letters</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-2-3">
+                                            <label for="your-comment">Comment</label>
+                                            <div class="form-field">
+                                                <span class="form-field-container">
+                                                    <textarea type="text" name="your-comment" id="your-comment"
+                                                        placeholder="Write your comment here" minlength="10"
+                                                        autocomplete="on" accesskey="c" required="required" cols="30"
+                                                        rows="6"></textarea>
+                                                    <i class="form-field-icon"></i>
+                                                </span>
+                                                <p class="form-help">Comment should be at least 10 characters</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="button button-primary">Post my comment</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
                             </section>
                         </div>
                     </div>
