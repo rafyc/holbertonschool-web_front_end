@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
-
-@rafyc
-elodieriou
-/
-holbertonschool-web_front_end
-Public
-Fork your own copy of elodieriou/holbertonschool-web_front_end
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Beta Try the new code view
-holbertonschool-web_front_end/0x0A-Bootstrap/3-index.html
-
-Elodie Riou FEATURE: implement cards and modals
-Latest commit e30368a on Jan 5
-History
-0 contributors
-104 lines (100 sloc) 5.62 KB
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -50,41 +19,44 @@ History
 
 <body>
     <div class="container-lg p-5">
-        <div class="d-flex flex-column flex-sm-row justify-content-center">
-            <div class="mt-4">
-                <div class="card mx-3">
+        <div class="row">
+            <div class="col-sm-4 mt-4">
+                <div class="card">
                     <div class="card-header">Coding</div>
                     <img class="card-img-top" src="https://via.placeholder.com/450x200" />
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold">HTML</h5>
-                        <p>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be
+                        <h5 class="card-title">HTML</h5>
+                        <p class="card-text">Hypertext Markup Language (HTML) is the standard markup language for
+                            documents designed to be
                             displayed in a web browser.</p>
                         <button class="btn btn-danger" data-toggle="modal" data-target="#playModal">Play with</button>
                     </div>
                     <div class="card-footer">40h</div>
                 </div>
             </div>
-            <div class="mt-4">
-                <div class="card mx-3">
+            <div class="col-sm-4 mt-4">
+                <div class="card">
                     <div class="card-header">Coding</div>
                     <img class="card-img-top" src="https://via.placeholder.com/450x200" />
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold">CSS</h5>
-                        <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+                        <h5 class="card-title">CSS</h5>
+                        <p class="card-text">Cascading Style Sheets (CSS) is a style sheet language used for describing
+                            the presentation
                             of a document written in a markup language like HTML.</p>
                         <button class="btn btn-danger" data-toggle="modal" data-target="#playModal">Play with</button>
                     </div>
                     <div class="card-footer">35h</div>
                 </div>
             </div>
-            <div class="mt-4">
-                <div class="card mx-3">
+            <div class="col-sm-4 mt-4">
+                <div class="card">
                     <div class="card-header">Coding</div>
                     <img class="card-img-top" src="https://via.placeholder.com/450x200" />
                     <div class="card-body">
-                        <h5 class="card-title font-weight-bold">Javascript</h5>
+                        <h5 class="card-title">Javascript</h5>
                         <p class="card-text">JavaScript, often abbreviated as JS, is a programming language that
-                            conforms to the ECMAScript specification.</p>
+                            conforms to the
+                            ECMAScript specification.</p>
                         <button class="btn btn-danger" data-toggle="modal" data-target="#playModal">Play with</button>
                     </div>
                     <div class="card-footer">70h</div>
@@ -94,12 +66,12 @@ History
     </div>
 
     <!-- Modal -->
-    <div id="playModal" tabindex="-1" role="dialog" aria-labelledby="playModal" aria-hidden="true" class="modal">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+    <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="playModal" aria-hidden="true">
+        <div role="document" class="modal-dialog modal-dialog-centered">
+            <div class="modal-content px-3 pb-3">
                 <div class="modal-header">
-                    <h5 id="exampleModalLabel" class="modal-title font-weight-bold">Play with CodePen</h5>
-                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                    <h5 class="modal-title" id="exampleModalLabel">Play with CodePen</h5>
+                    <button class="btn-close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -120,17 +92,17 @@ History
                         coding skills, with an estimated 330,000 registered users and 14.16 million monthly visitors.
                     </p>
 
-                    <form class="border-top pt-3 pb-3">
+                    <form class="border-top pt-3 form-group">
                         <div>
-                            <h5 class="font-weight-bold pb-3">Connect</h5>
+                            <h5>Connect</h5>
                         </div>
-                        <div class="row form-group d-flex flex-row align-items-center">
+                        <div class="row">
                             <label class="col-form-label col-sm-2" for="username">Username</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="text" id="username" />
                             </div>
                         </div>
-                        <div class="row form-group d-flex flex-row">
+                        <div class="row">
                             <label class="col-form-label col-sm-2" for="passowrd">Password</label>
                             <div class="col-sm-10">
                                 <input class="form-control" type="password" id="passowrd" />
@@ -147,18 +119,3 @@ History
 </body>
 
 </html>
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-holbertonschool-web_front_end/3-index.html at main · elodieriou/holbertonschool-web_front_end
