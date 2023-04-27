@@ -7,19 +7,27 @@ const studentHogwarts = () => {
       privateScore += points
     )
   }
-  const setName = (newName) => {
-    name = newName
-  }
-  const rewardStudent = () => changeScoreBy(1)
-  const penalizeStudent = () => changeScoreBy(-1)
-  const getScore = () => { return (`${name}:${privateScore}`) }
-
   return {
-    setName,
-    rewardStudent,
-    penalizeStudent,
-    getScore,
-  };
+    setName: (newName) => { name = newName },
+    rewardStudent: () => changeScoreBy(1),
+    penalizeStudent: () => changeScoreBy(-1),
+    getScore: () => { return (`${name}:${privateScore}`) }
+  }
+
+  // Same as :
+  // const setName = (newName) => {
+  //   name = newName
+  // }
+  // const rewardStudent = () => changeScoreBy(1)
+  // const penalizeStudent = () => changeScoreBy(-1)
+  // const getScore = () => { return (`${name}:${privateScore}`) }
+
+  // return {
+  //   setName,
+  //   rewardStudent,
+  //   penalizeStudent,
+  //   getScore,
+  // };
 }
 
 const harry = studentHogwarts();
