@@ -27,7 +27,7 @@ const hundredTime = () => {
 }
 
 let t0 = performance.now();
-setTimeout(() => { hundredTime() },);
+setTimeout(() => { hundredTime() }, 0);
 let t1 = performance.now();
 
 console.log(`Execution time of calculating prime numbers 100 times was ${t1 - t0} milliseconds.`);
