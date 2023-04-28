@@ -15,10 +15,7 @@ const processError = (itemName) => {
 
 const processOrder = (itemName, callbackPayment, callbackError) => {
   console.log(`Verifying the stock of ${itemName}`);
-  if (stock[itemName] > 0)
-    callbackPayment(itemName)
-  else
-    callbackError(itemName)
+  stock[itemName] > 0 ? callbackPayment(itemName) : callbackError(itemName);
 }
 
 let buy = window.prompt('Please enter the item you would like to purchase (Macbook, iPhone)')
