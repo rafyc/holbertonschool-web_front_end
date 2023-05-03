@@ -5,6 +5,12 @@
 
     <meta charset="utf-8" />
     <title>Task 5</title>
+    <style>
+        .loading {
+            opacity: 0.2;
+        }
+
+    </style>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script type="application/javascript">
@@ -24,6 +30,7 @@
         }
 
         const queryWikipedia = (search, offset = 0) => {
+            displayLoading(true)
             let url = 'https://en.wikipedia.org/w/api.php';
             let itemsPerPage = 10
             const data = {
@@ -46,6 +53,7 @@
                     arr = res.query.search
                     for (let i = 0; i < arr.length; i++)
                         addNewArticle(arr[i].pageid, arr[i].title, arr[i].snippet)
+                    displayLoading(false)
                 }
             });
         }
@@ -57,7 +65,7 @@
             while (nbPagination < nbPages) {
                 $('#pagination').append(`<li>${nbPagination}</li>`)
                 let bold = currentOffset == 0 ? 1 : currentOffset / 10
-                nbPagination == bold || nbPagination == 1 ? $('#pagination li:last').css({ fontWeight: "bold" }) : null
+                nbPagination == bold ? $('#pagination li:last').css({ fontWeight: "bold" }) : null
                 nbPagination++
             }
             $('#pagination li').css({ display: 'inline-block', cursor: "pointer", marginLeft: "10px" })
@@ -65,8 +73,10 @@
                 value = $(event.currentTarget).text()
                 queryWikipedia($('input[type="text"]').val(), value)
             })
+        }
 
-
+        const displayLoading = (loading) => {
+            loading ? $('ul:first').wrap("<div class='loading'/>") : $('ul:first').unwrap()
         }
 
         $(document).ready(function () { createSearchForm() })
