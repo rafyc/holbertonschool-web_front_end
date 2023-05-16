@@ -13,6 +13,16 @@ const setCookies = () => {
 
 const showCookies = () => {
   const para = document.createElement("p");
-  para.innerHTML = (`Cookies:${document.cookie}`);
+  para.innerHTML = (`Email: ${getCookie('email')} - Firstname: ${getCookie('username')}`);
   document.body.appendChild(para);
+}
+
+const getCookie = (name) => {
+  let cookieArr = document.cookie.split(";");
+  for (let i = 0; i < cookieArr.length; i++) {
+    let cookiePair = cookieArr[i].split("=");
+    if (name == cookiePair[0].trim())
+      return decodeURIComponent(cookiePair[1])
+  }
+  return null
 }
