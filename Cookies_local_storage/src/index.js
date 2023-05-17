@@ -1,3 +1,4 @@
+
 const setCookies = () => {
   inputName = document.getElementById('firstname').value
   inputEmail = document.getElementById('email').value
@@ -8,7 +9,8 @@ const setCookies = () => {
   const userEmail = `email=${inputEmail}`
   document.cookie = `${userName}; path=/`
   document.cookie = `${userEmail}; path=/`
-  document.cookie = ` ${expires}; path=/`
+  document.cookie = `${expires}; path=/`
+  showWelcomeMessageOrForm()
 }
 
 const showCookies = () => {
@@ -25,4 +27,41 @@ const getCookie = (name) => {
       return decodeURIComponent(cookiePair[1])
   }
   return null
+}
+
+const showForm = () => {
+  let welcomeMessage = document.getElementsByTagName('h1')[0];
+  if (welcomeMessage.innerHTML.length != 0) {
+    welcomeMessage.innerHTML = ''
+  }
+  document.getElementById("form").style.display = "block";
+}
+
+const hideForm = () => {
+  document.getElementById("form").style.display = "none";
+}
+
+const deleteCookiesAndShowForm = () => {
+  document.cookie = `username=; path=/`
+  document.cookie = `email=; path=/`
+  document.cookie = `expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`
+  showForm()
+}
+
+const showWelcomeMessageOrForm = () => {
+  cookieName = getCookie('username')
+  cookieEmail = getCookie('email')
+
+  firstname == '' && elmail == '' ? showForm() : hideForm()
+
+  const welcomeMessage = document.createElement("h1")
+  let a = document.createElement('a')
+  let link = document.createTextNode('(logout)')
+  a.appendChild(link)
+  a.href = "javascript:deleteCookiesAndShowForm()";
+  welcomeMessage.innerHTML = `Welcome ${cookieName}`
+  welcomeMessage.appendChild(a)
+  document.body.appendChild(welcomeMessage)
+
+  a.style.cssText = " font-style: italic; margin-left: 10px; color: black; font-weight: normal; text-decoration: none;"
 }
