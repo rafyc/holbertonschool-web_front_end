@@ -1,32 +1,24 @@
 
-const setCookies = () => {
+// const setCookies = () => {
+//   inputName = document.getElementById('firstname').value
+//   inputEmail = document.getElementById('email').value
+//   const date = new Date()
+//   date.setDate(date.getDate() + 10)
+//   const expires = 'expires=' + date.toUTCString()
+//   const userName = `username=${inputName}`
+//   const userEmail = `email=${inputEmail}`
+//   document.cookie = `${userName}; path=/`
+//   document.cookie = `${userEmail}; path=/`
+//   document.cookie = `${expires}; path=/`
+//   showWelcomeMessageOrForm()
+// }
+
+const setCookiesAndShowWelcomeMessage = () => {
   inputName = document.getElementById('firstname').value
   inputEmail = document.getElementById('email').value
-  const date = new Date()
-  date.setDate(date.getDate() + 10)
-  const expires = 'expires=' + date.toUTCString()
-  const userName = `username=${inputName}`
-  const userEmail = `email=${inputEmail}`
-  document.cookie = `${userName}; path=/`
-  document.cookie = `${userEmail}; path=/`
-  document.cookie = `${expires}; path=/`
+  Cookies.set('name', inputName, { expires: 10, path: '/', domain: '127.0.0.1' })
+  Cookies.set('email', inputEmail, { expires: 10, path: '/', domain: '127.0.0.1' })
   showWelcomeMessageOrForm()
-}
-
-const showCookies = () => {
-  const para = document.createElement("p");
-  para.innerHTML = (`Email: ${getCookie('email')} - Firstname: ${getCookie('username')}`);
-  document.body.appendChild(para);
-}
-
-const getCookie = (name) => {
-  let cookieArr = document.cookie.split(";");
-  for (let i = 0; i < cookieArr.length; i++) {
-    let cookiePair = cookieArr[i].split("=");
-    if (name == cookiePair[0].trim())
-      return decodeURIComponent(cookiePair[1])
-  }
-  return null
 }
 
 const showForm = () => {
@@ -42,15 +34,14 @@ const hideForm = () => {
 }
 
 const deleteCookiesAndShowForm = () => {
-  document.cookie = `username=; path=/`
-  document.cookie = `email=; path=/`
-  document.cookie = `expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`
+  Cookies.remove('name', { path: '/', domain: '127.0.0.1' })
+  Cookies.remove('email', { path: '/', domain: '127.0.0.1' })
   showForm()
 }
 
 const showWelcomeMessageOrForm = () => {
-  cookieName = getCookie('username')
-  cookieEmail = getCookie('email')
+  cookieName = Cookies.get('name')
+  cookieEmail = Cookies.get('email')
 
   firstname == '' && elmail == '' ? showForm() : hideForm()
 
